@@ -3,3 +3,124 @@
 @import 'reset';
 @import 'global';
 @import 'libs';
+
+
+.header {
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 45px 0;
+        &__list {
+            display: flex;
+        }
+        &__item{
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+        &__link {
+            color: #243f4d;
+        }
+    }
+    .user-nav {
+        display: flex;
+        align-items: center;
+        &__item {
+            &:not(:last-child) {
+                margin-right: 60px;
+            }
+        }
+        
+        &__link {
+            padding: 20px;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 20px;
+                height: 20px;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            &--search::before {
+                background-image: url("../images/user-nav/search.svg");
+            }
+
+            &--heart::before {
+                background-image: url("../images/user-nav/heart.svg");
+            }
+
+            &--cart::before {
+                background-image: url("../images/user-nav/cart.svg");
+            }
+
+            &--other::before {
+                background-image: url("../images/user-nav/other.svg");
+            }
+            
+            &--search {
+                background-color: #edf1f4;
+            }
+
+            &--search,
+            &--other {
+                border-radius: 50%;
+            }
+
+            &--heart {
+                border-radius: 25px 0 0 25px;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 1px;
+                    height: 32px;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    background-color: #fde7d3;
+                }
+            }
+
+            &--cart {
+                border-radius: 0 25px 25px 0;
+            }
+
+            &--heart,
+            &--cart {
+                background-color: #fcd7b6;
+                padding: 10px 30px;
+            }
+
+            &--other {
+                background-color: #a3bbc8;
+            }
+
+        }
+
+
+        &__wrapper {
+            margin: 0 20px 0 20px;
+        }
+
+        &__num {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-color: $white;
+            border-radius: 50%;
+            right: 10px;
+            font-size: 10px;
+            line-height: 16px;
+            text-align: center;
+        }
+          
+    }
+}
