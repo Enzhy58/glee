@@ -11,27 +11,32 @@
         justify-content: space-between;
         align-items: center;
         padding: 45px 0;
+
         &__list {
             display: flex;
         }
-        &__item{
+
+        &__item {
             &:not(:last-child) {
                 margin-right: 30px;
             }
         }
+
         &__link {
-            color: #436372;
+            color: $blue-text;
         }
     }
+
     .user-nav {
         display: flex;
         align-items: center;
+
         &__item {
             &:not(:last-child) {
                 margin-right: 60px;
             }
         }
-        
+
         &__link {
             padding: 20px;
             position: relative;
@@ -64,9 +69,9 @@
             &--other::before {
                 background-image: url("../images/user-nav/other.svg");
             }
-            
+
             &--search {
-                background-color: #edf1f4;
+                background-color: $lightblue;
             }
 
             &--search,
@@ -77,6 +82,7 @@
             &--heart {
                 border-radius: 25px 0 0 25px;
                 position: relative;
+
                 &::after {
                     content: '';
                     position: absolute;
@@ -85,7 +91,7 @@
                     top: 50%;
                     right: 0;
                     transform: translateY(-50%);
-                    background-color: #fde7d3;
+                    background-color: $lightorange;
                 }
             }
 
@@ -95,12 +101,12 @@
 
             &--heart,
             &--cart {
-                background-color: #fcd7b6;
+                background-color: $orange;
                 padding: 10px 30px;
             }
 
             &--other {
-                background-color: #a3bbc8;
+                background-color: $accent;
             }
 
         }
@@ -121,75 +127,91 @@
             line-height: 16px;
             text-align: center;
         }
-          
+
     }
 }
 
+
 .footer-top {
     padding: 80px 0;
-    border-bottom: 1px solid #dae4e9;
+    border-bottom: 1px solid $line-footer;
+
     &__inner {
         display: flex;
         justify-content: space-between;
     }
+
     &__box {
         max-width: 200px;
+
         &:not(:last-child) {
             margin-right: 100px;
         }
+
         &:last-child {
             max-width: 280px;
         }
+
         .logo__img {
             margin-bottom: 25px;
         }
     }
+
     &__contacts {
         span {
             text-transform: uppercase;
         }
     }
+
     &__items {
         display: block;
+
         &:not(:last-child) {
             margin-bottom: 10px;
         }
     }
+
     &__items,
     &__list,
     &__text {
-        font-weight: 400;
+        font-weight: $fw-400;
         font-size: 14px;
         line-height: 24px;
-        color: #7b7b7b;
+        color: $gray;
     }
+
     &__title {
-        font-family: 'DMSans';
-        font-weight: 700;
+        font-family: $dmsans;
+        font-weight: $fw-700;
         font-size: 16px;
         line-height: 21px;
-        color: #1f2044;
+        color: $footer-title;
         text-transform: uppercase;
         margin-bottom: 30px;
     }
+
     &__item {
         line-height: 32px;
     }
+
     &__text {
         margin-bottom: 40px;
     }
+
     &__input {
-        background-color: #fef7f0;
+        background-color: $yellow;
         padding: 10px;
         max-width: 170px;
         width: 100%;
+
         &::placeholder {
-            font-family: 'DMSans';
-            font-weight: 400;
+            font-family: $dmsans;
+            font-weight: $fw-400;
             font-size: 12px;
-            color: #234969;
+            color: $darkblue-text;
         }
     }
+
     &__btn {
         padding: 14px;
         font-size: 14px;
@@ -200,12 +222,13 @@
 
 .footer-bottom {
     padding: 35px 0;
+
     &__inner {
         display: flex;
         justify-content: space-between;
         font-size: 14px;
         line-height: 32px;
-        color: #7b7b7b;
+        color: $gray;
     }
 }
 
@@ -213,12 +236,15 @@
     &__list {
         display: flex;
     }
+
     &__item {
         padding-right: 15px;
         position: relative;
+
         &:not(:last-child) {
             margin-right: 15px;
         }
+
         &:not(:last-child)::before {
             content: '';
             position: absolute;
@@ -227,7 +253,7 @@
             top: 50%;
             right: 0;
             transform: translateY(-50%);
-            background-color: #7b7b7b;
+            background-color: $gray;
         }
     }
 }
