@@ -342,3 +342,47 @@
         }
     }
 }
+
+.benefits {
+    &__list {
+        background-color: $yellow;
+        padding: 45px;
+        display: flex;
+        justify-content: space-around;
+    }
+    &__item {
+        font-family: $dmsans;
+        max-width: 215px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 0;
+            left: -35%;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        &:nth-child(1)::before {
+            background-image: url('../images/benefits/1.svg');
+        }
+        &:nth-child(2)::before {
+            background-image: url('../images/benefits/2.svg');
+        }
+        &:nth-child(3)::before {
+            background-image: url('../images/benefits/3.svg');
+        }
+    }
+    &__title {
+        font-weight: $fw-700;
+        color: #414141;
+        font-size: 18px;
+        line-height: 40px;
+    }
+    &__text {
+        font-weight: $fw-400;
+        color: #585858;
+    }
+}
