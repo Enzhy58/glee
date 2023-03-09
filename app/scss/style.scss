@@ -23,6 +23,7 @@
         }
 
         &__link {
+            font-weight: $fw-700;
             color: $blue-text;
         }
     }
@@ -254,6 +255,90 @@
             right: 0;
             transform: translateY(-50%);
             background-color: $gray;
+        }
+    }
+}
+
+.top-slider {
+    &__inner {
+        background-color: $orange;
+        padding: 100px 45px 45px 45px;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+
+    &__content {
+        margin-right: 100px;
+    }
+
+    &__title {
+        font-family: $rubik;
+        font-weight: $fw-700;
+        font-size: 72px;
+        line-height: 70px;
+        color: #243f4d;
+        max-width: 420px;
+        margin-bottom: 35px;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 30px;
+        color: $blue-text;
+        max-width: 370px;
+        margin-bottom: 40px;
+    }
+
+    &__link {
+        display: block;
+        font-weight: 500;
+        padding: 20px 20px 20px 25px;
+        width: 200px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 22px;
+            height: 9px;
+            top: 50%;
+            right: 15%;
+            transform: translateY(-50%);
+            background-image: url('../images/top-slider/arrow.svg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+
+        li {
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+
+            button {
+                font-weight: $fw-700;
+                font-size: 11px;
+                line-height: 9px;
+                color: #243f4d;
+                background-color: rgb(255, 255, 255, 0.302);
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
+
+            &.slick-active {
+                background-color: $white;
+                border-radius: 50%;
+            }
         }
     }
 }
