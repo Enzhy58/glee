@@ -3,3 +3,125 @@
 @import 'reset';
 @import 'global';
 @import 'libs';
+
+.header {
+    padding: 50px 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__list {
+        display: flex;
+        font-family: $rubik;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+    &__link {
+        font-weight: 700;
+        color: $menu;
+    }
+}
+
+.user-nav {
+    display: flex;
+    align-items: center;
+
+    &__link {
+        padding: 20px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        &--search::before {
+            background-image: url('../images/icons/search.svg');
+        }
+
+        &--like::before {
+            background-image: url('../images/icons/like.svg');
+        }
+
+        &--cart::before {
+            background-image: url('../images/icons/cart.svg');
+        }
+
+        &--other::before {
+            background-image: url('../images/icons/other.svg');
+        }
+
+        &--search {
+            background-color: $lightblue;
+        }
+
+        &--search,
+        &--other {
+            border-radius: 50%;
+        }
+
+        &--like {
+            border-radius: 25px 0 0 25px;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: 32px;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                background-color: $lightorange;
+            }
+        }
+
+        &--cart {
+            border-radius: 0 25px 25px 0;
+        }
+
+        &--like,
+        &--cart {
+            background-color: $orange;
+            padding: 10px 30px;
+        }
+
+        &--other {
+            background-color: $accent;
+        }
+    }
+
+    &__wrapper {
+        margin: 0 20px 0 20px;
+    }
+
+    &__num {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: $white;
+        top: 3px;
+        right: 10px;
+        font-family: $dmsans;
+        font-size: 10px;
+        line-height: 16px;
+        text-align: center;
+    }
+}
