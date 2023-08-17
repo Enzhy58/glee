@@ -19,3 +19,31 @@ body {
     margin: 0 auto;
     padding: 0 15px;
 }
+
+.btn--filled {
+    background-color: $accent;
+    color: $white;
+}
+
+.btn--arrow {
+    display: block;
+    font-size: 15px;
+    line-height: 12px;
+    width: 200px;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 22px;
+        height: 9px;
+        right: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url('../images/icons/arrow-btn.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+}
