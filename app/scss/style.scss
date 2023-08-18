@@ -261,11 +261,12 @@
             width: 95px;
         }
 
-        &-top__inner,
-        &-bottom__inner {
-            display: flex;
-            justify-content: space-between;
-        }
+    }
+
+    &-top__inner,
+    &-bottom__inner {
+        display: flex;
+        justify-content: space-between;
     }
 
     &-bottom {
