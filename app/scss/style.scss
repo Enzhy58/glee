@@ -299,3 +299,46 @@
         }
     }
 }
+
+.benefits {
+    &__list {
+        background-color: $yellow;
+        padding: 40px 0;
+        display: flex;
+        justify-content: space-around;
+    }
+    &__item {
+        max-width: 295px;
+        padding-left: 75px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 55px;
+            height: 55px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        &--support::before {
+            background-image: url('../images/icons/benefits/support.png');
+        }
+        &--delivery::before {
+            background-image: url('../images/icons/benefits/delivery.png');
+        }
+        &--payment::before {
+            background-image: url('../images/icons/benefits/payment.png');
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 40px;
+    }
+    &__text {
+        color: $gray;
+    }
+
+}
